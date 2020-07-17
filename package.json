@@ -1,0 +1,13 @@
+{
+  "name": "es-6",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/P-L-T-S/ES6-challenges.git",
+  "author": "Pedro Leonardo <pedrolts16@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@babel/cli": "^7.10.5",
+    "@babel/core": "^7.10.5",
+    "@babel/preset-env": "^7.10.4"
+  }
+}
