@@ -32,16 +32,19 @@ var _resto$endereco = resto.endereco,
     uf = _resto$endereco.uf,
     pais = _resto$endereco.pais;
 console.log(nome, idade);
-console.log(cidade, uf, pais);
+console.log(cidade, uf, pais); // user2 recebe todas as informacoes de user
+// user2 sobrepoe o atributo nome
 
 var user2 = _objectSpread(_objectSpread({}, user), {}, {
   nome: "roger"
 });
 
-console.log(user2);
+console.log(user2); // user3 recebe todas as informacoes de user
 
-var user3 = _objectSpread({}, user);
+var user3 = _objectSpread({}, user); // user3 sobrepoe a informacao de user
 
+
+user3.endereco.cidade = "Caucaia";
 console.log(user3); // parametros recebe todos os parametros em forma de vetor
 
 function soma() {
