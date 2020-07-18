@@ -16,6 +16,7 @@ Configurações para completar os desafios:
     configurar o babel:
         criar o .babelrc
             "presets": "preset-env"
+            "plugins": "@babel/plugin-proposal-object-rest-spread
 
     Package.json:
         "scrips"{

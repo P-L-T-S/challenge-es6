@@ -1,7 +1,34 @@
 // cria o array
-const arr = [1,2,3,4,5,6];
-// x recebe a primeira posicao
-// y recebe as outras posicoes
-const [x, ...y] = arr;
-console.log(x);
-console.log(y);
+const user = {
+    nome: "Pedro",
+    idade: 19,
+    endereco: {
+        cidade: "Cotia",
+        uf: "SP",
+        pais: "Brasil"
+    }
+};
+// nome recebe a primeira propriedade
+// idade recebe a segunda posicao
+// resto recebe o resto
+const {nome, idade,...resto} = user;
+const {endereco:{cidade, uf, pais}} = resto;
+
+console.log(nome, idade);
+console.log(cidade, uf, pais);
+
+const user2 = {
+    ...user,
+    nome: "roger"
+};
+console.log(user2);
+
+const user3 = {
+    ...user,
+}
+console.log(user3)
+// parametros recebe todos os parametros em forma de vetor
+function soma(...parametros){
+    // metodo reduce converte um vetor em um unico elemento
+    return parametros.reduce((total,next) => total + next);
+};
