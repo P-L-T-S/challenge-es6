@@ -21,3 +21,4 @@ Configurações para completar os desafios:
         "scrips"{
             "dev": "babel ./arquivo.js -o novoArquivo.js -w"
         }
+        
