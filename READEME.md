@@ -31,6 +31,9 @@ Configurações para completar os desafios:
             @babel/plugin-proposal-object-rest-spread,
         },
         "scrips"{
-            "dev": "babel ./arquivo.js -o novoArquivo.js -w"
+            para executar o babel:
+                "dev": "babel ./arquivo.js -o novoArquivo.js -w"
+            para executar o webpack em modo de desenvolvimento:
+                "dev" : "webpack --mode=development -w"
         },
         
