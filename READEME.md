@@ -35,5 +35,4 @@ Configurações para completar os desafios:
                 "dev": "babel ./arquivo.js -o novoArquivo.js -w"
             para executar o webpack em modo de desenvolvimento:
                 "dev" : "webpack --mode=development -w"
-        },
-        
+        }

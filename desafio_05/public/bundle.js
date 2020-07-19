@@ -81,32 +81,32 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./scripts/main.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./src/main.js");
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./scripts/funcoes.js":
-/*!****************************!*\
-  !*** ./scripts/funcoes.js ***!
-  \****************************/
+/***/ "./src/funcoes.js":
+/*!************************!*\
+  !*** ./src/funcoes.js ***!
+  \************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.soma = soma;\n\nfunction soma(a, b) {\n  return a + b;\n}\n\n;\n\n//# sourceURL=webpack:///./scripts/funcoes.js?");
+eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.soma = soma;\nexports.sub = sub;\nexports.div = div;\nexports.mult = mult;\n\nfunction soma(a, b) {\n  return a + b;\n}\n\n;\n\nfunction sub(a, b) {\n  return a - b;\n}\n\n;\n\nfunction div(a, b) {\n  return a / b;\n}\n\n;\n\nfunction mult(a, b) {\n  return a * b;\n}\n\n;\n\n//# sourceURL=webpack:///./src/funcoes.js?");
 
 /***/ }),
 
-/***/ "./scripts/main.js":
-/*!*************************!*\
-  !*** ./scripts/main.js ***!
-  \*************************/
+/***/ "./src/main.js":
+/*!*********************!*\
+  !*** ./src/main.js ***!
+  \*********************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\nvar _funcoes = __webpack_require__(/*! ./funcoes */ \"./scripts/funcoes.js\");\n\nconsole.log((0, _funcoes.soma)(1, 2));\n\n//# sourceURL=webpack:///./scripts/main.js?");
+eval("\n\nfunction _typeof(obj) { \"@babel/helpers - typeof\"; if (typeof Symbol === \"function\" && typeof Symbol.iterator === \"symbol\") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === \"function\" && obj.constructor === Symbol && obj !== Symbol.prototype ? \"symbol\" : typeof obj; }; } return _typeof(obj); }\n\nvar funcoes = _interopRequireWildcard(__webpack_require__(/*! ./funcoes */ \"./src/funcoes.js\"));\n\nfunction _getRequireWildcardCache() { if (typeof WeakMap !== \"function\") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }\n\nfunction _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== \"object\" && typeof obj !== \"function\") { return { \"default\": obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj[\"default\"] = obj; if (cache) { cache.set(obj, newObj); } return newObj; }\n\n// importa todas as funcoes de funcoes e retorna no objeto funcoes\n// desestrutura o objeto para cada função ser inserida em uma constante\nvar soma = funcoes.soma,\n    sub = funcoes.sub,\n    div = funcoes.div,\n    mult = funcoes.mult;\nconsole.log(soma(4, 4));\nconsole.log(sub(4, 4));\nconsole.log(div(4, 4));\nconsole.log(mult(4, 4));\n\n//# sourceURL=webpack:///./src/main.js?");
 
 /***/ })
 

@@ -1,8 +1,8 @@
 module.exports = {
     // arquivo principal
-    entry: "./scripts/main.js",
+    entry: "./src/main.js",
     output: {
-        path: __dirname,
+        path: __dirname + "/public",
         filename: "bundle.js",
     },
     module: {
