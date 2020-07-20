@@ -13,15 +13,36 @@ Configurações para completar os desafios:
             @babel/core
             @babel/preset-env
             @babel/plugin-proposal-object-rest-spread
-    
-    Instalar webpack:
-        yarn add webpack webpack-cli -D
-            criar arquivo "webpack.config.js"
 
     configurar o babel:
         criar o .babelrc
             "presets": "preset-env"
             "plugins": "@babel/plugin-proposal-object-rest-spread
+
+            Instalar webpack:
+                yarn add webpack webpack-cli -D
+                    criar arquivo "webpack.config.js"
+
+            Configurar webpack:
+                module: {
+                    rules: [
+                        {
+                            test: /\.js$/,
+                            exclude: /node_modules/,
+                            use: {
+                                loader: "babel-loader",
+                            },
+                        },
+                    ],
+                },
+
+            Instalar webpack-dev-server:
+                yarn add webpack-dev-server
+
+            Configurar webpack:
+                devServer: {
+                    contentBase: __dirname + "/public"
+                },
 
     Package.json:
         "devDependencies": {
