@@ -17,19 +17,20 @@ Configurações para completar os desafios:
             @babel/plugin-proposal-object-rest-spread -D
             // para converter async para codigo compreendido pelo novegador
             @babel/plugin-transform-async-to-generator -D
-            @babel/polyfill -D
-            babel-loader -D
 
     configurar o babel:
         criar o .babelrc
-                "presets": "preset-env"
+                "presets": "@babel/preset-env"
                 "plugins": ["@babel/plugin-proposal-object-rest-spread",
                             "@babel/plugin-transform-async-to-generator"]
 
 
     Instalar webpack:
-        yarn add webpack webpack-cli -D
-            
+        yarn add webpack -D
+        yarn add webpck-cli -D
+        yarn add babel-loader -D
+        yarn @babel/polyfill -D
+        
     Criar arquivo "webpack.config.js"
 
     Configurar webpack:
