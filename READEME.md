@@ -1,7 +1,7 @@
 Configurações para completar os desafios:
 
     Instalar o Node;
-    
+    // gerenciador de pacotes e extencoes
     Instalar o yarn;
         para instalar dependencias de desenvolvimento, basta acrescentar "-D" no final
         para instalar dependencias do babel:
@@ -9,40 +9,56 @@ Configurações para completar os desafios:
             
     Instalar o babel;
         Instalar dependencias do babel:
-            @babel/cli
-            @babel/core
-            @babel/preset-env
-            @babel/plugin-proposal-object-rest-spread
+            @babel/cli -D
+            @babel/core -D
+            // converte codigo ES6+ para ambiente de desenvolvimento utilizado
+            @babel/preset-env -D
+            // plugin para utilizar o rest e spread
+            @babel/plugin-proposal-object-rest-spread -D
+            // para converter async para codigo compreendido pelo novegador
+            @babel/plugin-transform-async-to-generator -D
+            @babel/polyfill -D
+            babel-loader -D
 
     configurar o babel:
         criar o .babelrc
-            "presets": "preset-env"
-            "plugins": "@babel/plugin-proposal-object-rest-spread
+                "presets": "preset-env"
+                "plugins": ["@babel/plugin-proposal-object-rest-spread",
+                            "@babel/plugin-transform-async-to-generator"]
 
-            Instalar webpack:
-                yarn add webpack webpack-cli -D
-                    criar arquivo "webpack.config.js"
 
-            Configurar webpack:
-                module: {
-                    rules: [
-                        {
-                            test: /\.js$/,
-                            exclude: /node_modules/,
-                            use: {
-                                loader: "babel-loader",
-                            },
+    Instalar webpack:
+        yarn add webpack webpack-cli -D
+            
+    Criar arquivo "webpack.config.js"
+
+    Configurar webpack:
+        module.exports = {
+            entry: "./arquivo",
+            output:{
+                path: __dirname,
+                filename: "./outroarquivo"
+            }
+            module: {
+                rules: [
+                    {
+                        test: /\.js$/,
+                        exclude: /node_modules/,
+                        use: {
+                            loader: "babel-loader",
                         },
-                    ],
-                },
+                    },
+                ],
+            },
+        };
 
-            Instalar webpack-dev-server:
-                yarn add webpack-dev-server
+    Instalar webpack-dev-server:
+        yarn add webpack-dev-server -D
 
-            Configurar webpack:
-                devServer: {
-                    contentBase: __dirname + "/public"
-                },
+    Adicionar configuracao no webpack:
+        devServer: {
+            contentBase: __dirname + "/public"
+        },
 
     Package.json:
         "devDependencies": {
@@ -50,6 +66,12 @@ Configurações para completar os desafios:
             @babel/core,
             @babel/preset-env,
             @babel/plugin-proposal-object-rest-spread,
+            @babel/plugin-transform-async-to-generator
+            "@babel/polyfill": "^7.10.4",
+            "babel-loader": "^8.1.0",
+            "webpack": "^4.43.0",
+            "webpack-cli": "^3.3.12",
+            "webpack-dev-server": "^3.11.0"
         },
         "scrips"{
             para executar o babel:
