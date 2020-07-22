@@ -1,14 +1,18 @@
-const minhaPromisse = () => new Promise((resolve) => {
-    setTimeout(() => {
-        resolve("ok");
-    }, 2000);
-});
-
-async function executaPromise(){
-    console.log(await minhaPromisse());
-    console.log(await minhaPromisse());
-    console.log(await minhaPromisse());
-    console.log(await minhaPromisse());
+function minhaPromisse(x) {
+    return new Promise(resolve => {
+        setTimeout(() => {
+            resolve(x);
+        }, 1000);
+    })
 };
+async function funcaoAssinc() {
+    const response1 = await minhaPromisse("1s");
+    console.log(response1);
 
-executaPromise();
+    const response2 = await minhaPromisse("2s");
+    console.log(response2);
+
+    const response3 = await minhaPromisse("3s");
+    console.log(response3);
+};
+funcaoAssinc();
