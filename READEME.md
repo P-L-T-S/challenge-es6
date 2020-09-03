@@ -1,4 +1,30 @@
-Configurações para completar os desafios:
+# :notebook: **Sobre**:
+
+Fiz estes desafios enquanto estudava **ES6** através da [Rocketseat](http://rocketseat.com.br) .
+
+Meu principal objetivo em colocar este arquivo no meu repositório é para ver como eu avanço com o tempo e para registrar minha evolução.
+
+<br>
+
+# :computer: **Técnologias utilizadas**:
+
+- HTML
+- CSS
+- ES6
+- Node
+- NPM
+- Yarn
+- Babel
+- Webpack
+
+
+
+
+
+
+
+# :pick: Configurações para completar os desafios:
+
 
     Instalar o Node;
     // gerenciador de pacotes e extencoes
